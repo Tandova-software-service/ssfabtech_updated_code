@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bay Window | SSFABTECH</title>
+  <link rel="icon" type="image/png" href="asset/meta-logo.avif" />
+  <link rel="stylesheet" href="style.css" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: #333;
+    }
+
+    /* ===== Navbar ===== */
+    .navbar-container {
+      background-color: white;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px 40px;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .logo {
+      height: 40px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #004aad;
+      font-weight: 500;
+    }
+
+    .menu-icon {
+      display: none;
+    }
+
+    /* ===== Section ===== */
+    .section-title {
+      text-align: center;
+      margin-top: 120px;
+      font-size: 2.2rem;
+      color: #004aad;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: #666;
+      font-size: 1.1rem;
+      margin-bottom: 40px;
+    }
+
+    .intro {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      line-height: 1.8;
+    }
+
+    .slider {
+      max-width: 700px;
+      margin: 30px auto;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      width: 300%;
+    }
+
+    .slides img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .advantages {
+      background: #f2f2f2;
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: 50px auto;
+      border-radius: 10px;
+    }
+
+    .advantages h3 {
+      color: #004aad;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .advantages ul {
+      list-style: none;
+      padding-left: 0;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .advantages ul li {
+      padding-left: 24px;
+      position: relative;
+      margin-bottom: 12px;
+    }
+
+    .advantages ul li::before {
+      content: "✔️";
+      position: absolute;
+      left: 0;
+      color: #004aad;
+    }
+
+    /* ===== WhatsApp Button ===== */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+
+    .whatsapp-float img {
+      width: 50px;
+      height: 50px;
+    }
+
+    /* ===== Footer ===== */
+    .footer {
+      background-color: #002244;
+      color: white;
+      padding: 40px 20px;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .footer-column {
+      flex: 1 1 250px;
+      margin: 10px;
+    }
+
+    .footer-column h3 {
+      margin-bottom: 15px;
+    }
+
+    .footer-column p, .footer-column a {
+      font-size: 0.95rem;
+      color: #ccc;
+    }
+
+    .footer-column a:hover {
+      color: #ffc107;
+    }
+
+    .footer-bottom {
+      margin-top: 20px;
+      text-align: center;
+      color: #aaa;
+    }
+
+    .footer-bottom a {
+      color: #ffc107;
+    }
+
+    /* ===== Responsive ===== */
+    @media screen and (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: white;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .menu-icon {
+        display: block;
+        font-size: 24px;
+        color: #004aad;
+        cursor: pointer;
+      }
+
+      .slides img {
+        height: 250px;
+      }
+
+      .slider, .intro, .advantages {
+        width: 90%;
+      }
+    }
+
+
+    
+
+/* === Image Gallery Slider Section === */
+.our-works {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.section-header h2 {
+  color: #002366;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.section-header p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 30px;
+  position: relative;
+  display: inline-block;
+}
+
+.section-header p::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 60px;
+  background-color: #f4af1b;
+  margin: 8px auto 0;
+}
+
+.works-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-image {
+  width: 90%;
+  max-width: 700px;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+  transition: opacity 0.5s ease;
+}
+
+.thumbnail-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.thumbnail {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.thumbnail:hover {
+  transform: scale(1.1);
+}
+
+.thumbnail.active {
+  border: 3px solid #004aad;
+}
+
+
+
+
+  </style>
+</head>
+<body>
+
+  <!-- ===== Header/Navbar ===== -->
+  <header class="navbar-container" id="navbar">
+    <nav class="navbar">
+      <img src="asset/logo.avif" alt="SS Fabtech" class="logo" />
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="product.html">Products</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+      <div id="menu-toggle" class="menu-icon">☰</div>
+    </nav>
+  </header>
+ 
+<br><br>
+<!-- Work Section -->
+<section class="our-works">
+  <div class="section-header">
+    <h2>Our Works</h2>
+    <p>Every Project, A Promise Delivered.</p>
+  </div>
+
+    <p>Bay windows are architectural features that project outward from the main walls...</p>
+    <p>SSFABTECH’s bay windows are fabricated using high-quality uPVC profiles...</p>
+  </div>
+
+
+  <div class="works-container">
+    <img id="mainImage" class="main-image loaded" src="asset\works1.avif" alt="Work Image" />
+
+    <div class="thumbnail-container">
+      <img src="asset\works2.avif" class="thumbnail active" onclick="manualChange(0)">
+      <img src="asset\works3.avif" class="thumbnail" onclick="manualChange(1)">
+      <img src="asset\works4.avif" class="thumbnail" onclick="manualChange(2)">
+
+      <img src="asset\works1.avif" class="thumbnail" onclick="manualChange(4)">
+
+    </div>
+  </div>
+
+
+  <!-- ===== Advantages Section ===== -->
+  <div class="advantages">
+    <h3>Advantages of Bay Windows</h3>
+    <ul>
+      <li>Panoramic outdoor views with increased natural light</li>
+      <li>Enhanced ventilation and airflow</li>
+      <li>Additional space for seating or decor</li>
+      <li>Improves exterior architectural appeal</li>
+      <li>Energy-efficient and soundproof when glazed</li>
+      <li>Customizable frame styles with uPVC durability</li>
+    </ul>
+  </div>
+</section>
+  <!-- ===== WhatsApp Button ===== -->
+  <a href="https://wa.me/9381077991" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <img src="asset/whatsapp logo.avif" alt="WhatsApp" />
+  </a>
+  <!-- Footer Section -->
+<footer class="footer" id="contact">
+  <div class="footer-container">
+
+    <!-- CONTACT US -->
+    <div class="footer-column">
+      <h3>CONTACT US</h3>
+      <p><i class="fas fa-map-marker-alt"></i> Address T-282, sidco women's indl park, kattur village, Thirumullaivoyal, Chennai, Tamil Nadu 600062.</p>
+      <p><i class="fas fa-phone"></i> +91 9381077991</p>
+      <p><i class="fas fa-mobile-alt"></i> +91 9381077993</p>
+      <p><i class="fas fa-envelope"></i>ssfabtech@yahoo.com</p>
+    </div>
+
+    <!-- QUICK LINKS -->
+    <div class="footer-column quick-links">
+      <h3>QUICK LINKS</h3>
+      <div class="links">
+        <ul>
+          <li><a href="product.html">UPVC WINDOWS</a></li>
+          <li><a href="product.html">UPVC DOORS</a></li>
+          <li><a href="ssfabtech-certificate.pdf">TEST CERTIFICATES</a></li>
+        </ul>
+        <ul>
+          <li><a href="product.html">UPVC WINDOWS WITH GRILL</a></li>
+          <li><a href="product.html">UPVC VENTILATORS</a></li>
+          <li><a href="#services">REPAIR AND SERVICES</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+<br>
+<center>
+<!-- Moved this OUTSIDE the footer for better layout control -->
+<div class="footer-bottom">
+  <p>© 2025 SSfabtech. Designed & Developed by <a href="mailto:kaviyasivakumar12@gmail.com">kaviya sivakumar</a>
+</p>
+
+</div>
+</center>
+</footer>
+
+
+  <!-- ===== Mobile Menu Toggle Script ===== -->
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+
+
+    // ===== Image gallery logic =====
+const imageUrls = [
+  "asset/works1.avif",
+
+  "asset/works2.avif",
+  "asset/works3.avif",
+  "asset/works4.avif",
+];
+
+let currentIndex = 0;
+const mainImage = document.getElementById("mainImage");
+const thumbnails = document.querySelectorAll(".thumbnail");
+
+function updateSlider(index) {
+  currentIndex = index;
+  mainImage.classList.remove("loaded");
+  mainImage.src = imageUrls[index];
+  thumbnails.forEach((t) => t.classList.remove("active"));
+  thumbnails[index].classList.add("active");
+}
+
+mainImage.onload = () => {
+  mainImage.classList.add("loaded");
+};
+
+function autoSlide() {
+  currentIndex = (currentIndex + 1) % imageUrls.length;
+  updateSlider(currentIndex);
+}
+
+function manualChange(index) {
+  clearInterval(autoInterval);
+  updateSlider(index);
+  autoInterval = setInterval(autoSlide, 3000);
+}
+
+let autoInterval = setInterval(autoSlide, 3000);
+
+  </script>
+</body>
+</html>

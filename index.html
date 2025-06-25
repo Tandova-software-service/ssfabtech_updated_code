@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>SS Fabtech - Premium Windows</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="asset\meta-logo.avif" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://ssfabtech.in/" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://ssfabtech.in/asset/meta-logo.avif" />
+
+  <!-- Description & Keywords -->
+  <meta name="description" content="SS Fabtech is Chennai's trusted uPVC window & door manufacturer since 2010. Discover elegant, durable, energy-saving designs built for modern homes. Contact us for a free quote!" />
+  <meta name="keywords" content="uPVC windows Chennai, SS Fabtech, premium windows, uPVC doors, energy-efficient windows, window installation, window replacement, Chennai windows" />
+  <meta name="author" content="SS Fabtech" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="SS Fabtech - Premium uPVC Windows & Doors in Chennai" />
+  <meta property="og:description" content="Explore high-quality, energy-efficient uPVC windows and doors in Chennai. Trusted since 2010." />
+  <meta property="og:image" content="https://ssfabtech.in/asset/meta-logo.avif" />
+  <meta property="og:url" content="https://ssfabtech.in/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="SS Fabtech" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SS Fabtech - Premium Windows & Doors in Chennai" />
+  <meta name="twitter:description" content="Energy-saving, eco-friendly uPVC windows & doors. Contact SS Fabtech for a free quote." />
+  <meta name="twitter:image" content="https://ssfabtech.in/asset/meta-logo.avif" />
+
+  <style>
+/* Default transparent navbar for home page */
+/* Base Navbar */
+.navbar-container {
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 40px;
+  z-index: 1000;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Shadow and white background when scrolled */
+.navbar-container.scrolled {
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Layout spacing */
+.navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Logo */
+.logo {
+  height: 40px;
+}
+
+/* Desktop links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 16px;
+  padding: 6px 10px;
+}
+
+.nav-links a:hover {
+  color: #00a0fd;
+}
+
+/* Change text color when scrolled */
+.navbar-container.scrolled .nav-links a {
+  color: #000;
+}
+
+.navbar-container.scrolled .nav-links a:hover {
+  color: #004aad;
+}
+
+
+/* Hamburger icon */
+.menu-icon {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: #004aad;
+}
+
+/* ===== Mobile Styles ===== */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px; /* below navbar */
+    right: 20px;
+    background-color: white;
+    padding: 15px 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    gap: 15px;
+    min-width: 180px;
+    z-index: 999;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links a {
+    color: #004aad;
+    font-size: 16px;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  /* Hide desktop menu layout */
+  .navbar {
+    flex-direction: row;
+  }
+}
+
+
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1000;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+  display: block;
+  margin: auto;
+  max-width: 80%;
+  max-height: 80%;
+  animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+  from {transform: scale(0.7);}
+  to {transform: scale(1);}
+}
+
+.close {
+  position: absolute;
+  top: 30px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.footer a {
+  color: #ffc107;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+  </style>
+</head>
+<body>
+
+<!-- Header/Navbar -->
+<header class="navbar-container" id="navbar">
+  <nav class="navbar">
+    <!-- Logo on the left -->
+    <img src="asset/logo.avif" alt="SS Fabtech" class="logo" />
+
+    <!-- Hamburger Menu Icon on the right (mobile) -->
+    <div id="menu-toggle" class="menu-icon">☰</div>
+
+    <!-- Navigation Links -->
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="product.html">Products</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+  <!-- Hero Section -->
+  <section class="hero-content-wrapper">
+    <div class="hero-content">
+      <h1>Transform Your Home With Premium Windows</h1>
+      <p>Energy-efficient, beautiful, and built to last. Experience the best View difference.</p>
+      <div class="hero-buttons">
+        <a href="contact.html" class="btn primary">Get a Free Quote</a>
+        <a href="product.html" class="btn secondary">Explore Products</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/9381077991" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <img src="asset/whatsapp logo.avif" alt="WhatsApp" />
+  </a>
+
+  <!-- why-choose-us -->
+    <section id="features" class="features">
+      <div class="container">
+        <div class="section-header">
+          <h2>Why Choose SSFabtech</h2>
+          <p>Experience premium quality windows backed by exceptional service</p>
+        </div>
+        <div class="features-grid">
+          <div class="feature-card slide-in-left">
+            <i class="fas fa-shield-alt"></i>
+            <h3>25-Year Warranty</h3>
+            <p>Our industry-leading warranty gives you peace of mind for decades to come.</p>
+          </div>
+          <div class="feature-card slide-in-left delay-1">
+            <i class="fas fa-leaf"></i>
+            <h3>Energy Efficient</h3>
+            <p>Save up to 30% on energy bills with our ENERGY STAR certified windows.</p>
+          </div>
+          <div class="feature-card slide-in-left delay-2">
+            <i class="fas fa-tools"></i>
+            <h3>Expert Installation</h3>
+            <p>Our certified technicians ensure perfect fit and performance.</p>
+          </div>
+          <div class="feature-card slide-in-left delay-3">
+            <i class="fas fa-money-bill-wave"></i>
+            <h3>Financing Available</h3>
+            <p>Flexible payment options make upgrading your windows affordable.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  <!-- about Section -->
+<section id="about" class="about-section">
+  <div class="about-container">
+    <div class="about-text">
+      <h2 class="about-title">About SSFabtech</h2>
+      <p class="about-subtitle">Creating beautiful, energy-efficient homes since 2010</p>
+      <p>
+        At SSFABTECH, we bring over 15 years of hands-on experience in uPVC window fabrication, and we're proud to step into the next level of excellence with the manufacturing of high-quality uPVC profiles. What began as a focused effort in fabrication has evolved into a forward-thinking journey rooted in quality, sustainability, and innovation.
+      </p>
+      <p>
+        uPVC (unplasticized polyvinyl chloride) is more than just a building material—it represents our commitment to creating structures that are visually striking and built to perform. With uPVC, we support eco-conscious choices by reducing reliance on deforestation, one window and door at a time.
+      </p>
+      <ul>
+        <li>Producing LEAD-FREE uPVC profiles that are safe and recyclable.</li>
+        <li>Sourcing raw materials from Penta Extrusions, India to ensure global-grade quality.</li>
+        <li>Constantly innovating to meet both environmental standards and customer satisfaction.</li>
+      </ul>
+      <a href="contact.html" class="about-button">Get to Know Us</a>
+    </div>
+    <div class="about-image">
+      <img src="asset\company img.avif" alt="SSFABTECH Factory">
+    </div>
+  </div>
+</section>
+<!-- Product Filter Section -->
+
+  <section class="premium-section" id="product">
+<div class="about-text">
+      <h2 class="about-title">Our Premium Products</h2>
+      <p class="section-subtitle">Explore our range of high-quality window solutions</p>
+
+
+  <!-- Gallery Section -->
+  <section class="gallery-section">
+    <div class="filter-buttons">
+      <button class="filter-btn active" data-filter="all">All Windows & Doors</button>
+      <button class="filter-btn" data-filter="door">Doors</button>
+      <button class="filter-btn" data-filter="window">Windows</button>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-item window">
+        <img src="asset\bay window.avif" alt="Bay Window" />
+        <div class="overlay">Bay Window</div>
+      </div>
+      <div class="gallery-item window">
+        <img src="asset\grill.avif" alt=" Window With grill" />
+        <div class="overlay">Windows with grills</div>
+      </div>
+      <div class="gallery-item window">
+        <img src="asset\casement window.avif" alt="Casement Window" />
+        <div class="overlay">Casement Window</div>
+      </div>
+      <div class="gallery-item door">
+        <img src="asset\casement door.avif" alt="Casement Door" />
+        <div class="overlay">Casement Door</div>
+      </div>
+      <div class="gallery-item door">
+        <img src="asset\combination window.avif" alt="Combination Door" />
+        <div class="overlay">Combination Door</div>
+      </div>
+      <div class="gallery-item door">
+        <img src="asset\Sliding Door.avif" alt="Sliding Door" />
+        <div class="overlay">Sliding Door</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Zoom Modal -->
+  <div id="modal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modal-img" />
+  </div>
+
+    </div>
+  </section>
+
+
+  <!-- services-section -->
+  <section class="services" id="services">
+    <div class="services-header">
+      <h2>Our Services</h2>
+      <p>Comprehensive window solutions for every home</p>
+      <div class="underline"></div>
+    </div>
+    <div class="service-boxes">
+      <div class="service-card">
+        <div class="icon-wrapper">
+          <i class="fas fa-home"></i>
+        </div>
+        <h3>New Installation</h3>
+        <p>Transform your home with brand new, energy-efficient windows installed by our expert team.</p>
+         <a href="contact.html"><button>Learn More</button></a>
+      </div>
+      <div class="service-card">
+        <div class="icon-wrapper">
+          <i class="fas fa-sync-alt"></i>
+        </div>
+        <h3>Window Replacement</h3>
+        <p>Update old or damaged windows with modern, energy-saving alternatives that enhance your home's value.</p>
+         <a href="contact.html"><button>Learn More</button></a>
+      </div>
+      <div class="service-card">
+        <div class="icon-wrapper">
+          <i class="fas fa-wrench"></i>
+        </div>
+        <h3>Repair Services</h3>
+        <p>Extend the life of your existing windows with our professional repair and maintenance services.</p>
+        <a href="contact.html"><button>Learn More</button></a>
+      </div>
+      <div class="service-card">
+        <div class="icon-wrapper">
+          <i class="fas fa-ruler-combined"></i>
+        </div>
+        <h3>Custom Design</h3>
+        <p>Create unique window solutions tailored to your home's architecture and your personal style.</p>
+        <a href="contact.html"><button>Learn More</button></a>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- testimonial -->
+<div class="container">
+  <section class="our-work">
+    <div class="services-header">
+      <h2>Our Clients</h2>
+      <p>Comprehensive window solutions for every home</p>
+    <div class="underline"></div>
+  </div>
+  <div class="testimonial-row">
+    <!-- Client Logo 1 -->
+    <div class="testimonial-card logo-only">
+      <img src="asset\client1.avif" alt="Client 1" class="author-img" />
+    </div>
+
+        <!-- Client Logo 7 -->
+    <div class="testimonial-card logo-only">
+      <img src="asset\client7.avif" alt="Client 2" class="author-img" />
+    </div>
+
+
+        <!-- Client Logo 4 -->
+    <div class="testimonial-card logo-only">
+      <img src="asset\client4.avif" alt="Client 3" class="author-img" />
+    </div>
+
+        <!-- Client Logo 5 -->
+    <div class="testimonial-card logo-only">
+      <img src="asset\client5.avif" alt="Client 4" class="author-img" />
+    </div>
+
+
+    <!-- Client Logo 2 -->
+    <div class="testimonial-card logo-only">
+      <img src="asset\client2.png" alt="Client 5" class="author-img" />
+    </div>
+
+
+        <!-- Client Logo 5 -->
+    <div class="testimonial-card logo-only">
+      <img src="asset\client9.avif" alt="Client 6" class="author-img" />
+    </div>
+
+
+    <!-- Client Logo 3 -->
+    <div class="testimonial-card logo-only">
+      <img src="asset\client3.avif" alt="Client 7" class="author-img" />
+    </div>
+
+
+
+
+
+    <!-- Client Logo 6 -->
+    <div class="testimonial-card logo-only">
+      <img src="asset\client6.avif" alt="Client 7" class="author-img" />
+    </div>
+
+
+
+    <!-- Client Logo 8 -->
+    <div class="testimonial-card logo-only">
+      <img src="asset\client8.avif" alt="Client 9" class="author-img" />
+    </div>
+
+
+  </div>
+</div>
+
+<!-- Work Section -->
+<section class="our-works">
+  <div class="section-header">
+    <h2>Our Works</h2>
+    <p>Every Project, A Promise Delivered.</p>
+  </div>
+
+  <div class="works-container">
+    <img id="mainImage" class="main-image loaded" src="asset\works1.avif" alt="Work Image" />
+
+    <div class="thumbnail-container">
+      <img src="asset\works2.avif" class="thumbnail active" onclick="manualChange(0)">
+      <img src="asset\works3.avif" class="thumbnail" onclick="manualChange(1)">
+      <img src="asset\works4.avif" class="thumbnail" onclick="manualChange(2)">
+
+      <img src="asset\works1.avif" class="thumbnail" onclick="manualChange(4)">
+
+    </div>
+  </div>
+</section>
+  <!-- Footer Section -->
+<footer class="footer" id="contact">
+  <div class="footer-container">
+
+    <!-- CONTACT US -->
+    <div class="footer-column">
+      <h3>CONTACT US</h3>
+      <p><i class="fas fa-map-marker-alt"></i> Address T-282, sidco women's indl park, kattur village, Thirumullaivoyal, Chennai, Tamil Nadu 600062.</p>
+      <p><i class="fas fa-phone"></i> +91 9381077991</p>
+      <p><i class="fas fa-mobile-alt"></i> +91 9381077993</p>
+      <p><i class="fas fa-envelope"></i>ssfabtech@yahoo.com</p>
+    </div>
+
+    <!-- QUICK LINKS -->
+    <div class="footer-column quick-links">
+      <h3>QUICK LINKS</h3>
+      <div class="links">
+        <ul>
+          <li><a href="product.html">UPVC WINDOWS</a></li>
+          <li><a href="product.html">UPVC DOORS</a></li>
+          <li><a href="ssfabtech-certificate.pdf">TEST CERTIFICATES</a></li>
+        </ul>
+        <ul>
+          <li><a href="product.html">UPVC WINDOWS WITH GRILL</a></li>
+          <li><a href="product.html">UPVC VENTILATORS</a></li>
+          <li><a href="#services">REPAIR AND SERVICES</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+<br>
+<center>
+<!-- Moved this OUTSIDE the footer for better layout control -->
+<div class="footer-bottom">
+  <p>© 2025 SSfabtech. Designed & Developed by <a href="mailto:kaviyasivakumar12@gmail.com">kaviya sivakumar</a>
+</p>
+
+</div>
+</center>
+</footer>
+
+<script>
+
+// Get modal elements
+const modal = document.getElementById("modal");
+const modalImg = document.getElementById("modal-img");
+const closeBtn = document.getElementsByClassName("close")[0];
+
+// Add click event to all gallery images
+document.querySelectorAll(".gallery-item img").forEach(img => {
+  img.addEventListener("click", () => {
+    modal.style.display = "block";
+    modalImg.src = img.src;
+    modalImg.alt = img.alt;
+  });
+});
+
+// Close modal on 'X' click
+closeBtn.onclick = function () {
+  modal.style.display = "none";
+};
+
+// Also close on click outside the image
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
+
+  const buttons = document.querySelectorAll('.filter-btn');
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      // Optional: Add product filter logic here
+    });
+  });
+
+
+// ===== Mobile menu toggle =====
+const menuToggle = document.getElementById('menu-toggle');
+const navList = document.getElementById('nav-links'); // renamed to avoid conflict
+
+menuToggle.addEventListener('click', () => {
+  navList.classList.toggle('show');
+});
+
+// ===== Image gallery logic =====
+const imageUrls = [
+  "asset/works1.avif",
+
+  "asset/works2.avif",
+  "asset/works3.avif",
+  
+];
+
+let currentIndex = 0;
+const mainImage = document.getElementById("mainImage");
+const thumbnails = document.querySelectorAll(".thumbnail");
+
+function updateSlider(index) {
+  currentIndex = index;
+  mainImage.classList.remove("loaded");
+  mainImage.src = imageUrls[index];
+  thumbnails.forEach((t) => t.classList.remove("active"));
+  thumbnails[index].classList.add("active");
+}
+
+mainImage.onload = () => {
+  mainImage.classList.add("loaded");
+};
+
+function autoSlide() {
+  currentIndex = (currentIndex + 1) % imageUrls.length;
+  updateSlider(currentIndex);
+}
+
+function manualChange(index) {
+  clearInterval(autoInterval);
+  updateSlider(index);
+  autoInterval = setInterval(autoSlide, 3000);
+}
+
+let autoInterval = setInterval(autoSlide, 3000);
+
+// ===== Navbar scroll behavior =====
+
+  const navbar = document.getElementById("navbar");
+  const navLinks = document.querySelectorAll(".nav-links a");
+
+  // Detect if on home page by checking URL (adjust if needed)
+  const isHomePage = window.location.pathname.includes("index.html") || window.location.pathname === "/" || window.location.pathname === "/index.html";
+
+  if (isHomePage) {
+    navbar.classList.add("home"); // transparent style
+  } else {
+    navbar.classList.add("scrolled"); // force solid for other pages
+  }
+
+  // Scroll logic only for homepage
+  if (isHomePage) {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add("scrolled");
+        navbar.classList.remove("home");
+      } else {
+        navbar.classList.remove("scrolled");
+        navbar.classList.add("home");
+      }
+    });
+  }
+
+  // Add 'active' class on click
+  navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      navLinks.forEach(l => l.classList.remove("active"));
+      link.classList.add("active");
+    });
+  });
+
+  const toggle = document.getElementById('menu-toggle');
+
+
+  toggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+
+
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const galleryItems = document.querySelectorAll(".gallery-item");
+
+    filterButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        // Remove active class from all buttons
+        filterButtons.forEach(btn => btn.classList.remove("active"));
+        button.classList.add("active");
+
+        const filter = button.getAttribute("data-filter");
+
+        // Filter items
+        galleryItems.forEach(item => {
+          if (filter === "all" || item.classList.contains(filter)) {
+            item.style.display = "block";
+          } else {
+            item.style.display = "none";
+          }
+        });
+      });
+    });
+  });
+</script>
+
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "SS Fabtech",
+  "image": "https://ssfabtech.in/asset/meta-logo.png",
+  "@id": "https://ssfabtech.in",
+  "url": "https://ssfabtech.in",
+  "telephone": "+91 9381077991",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "T-282, SIDCO Women’s Industrial Park, Kattur Village",
+    "addressLocality": "Thirumullaivoyal",
+    "addressRegion": "Tamil Nadu",
+    "postalCode": "600062",
+    "addressCountry": "IN"
+  },
+  "sameAs": []
+}
+
+
+</script>
+
+</body>
+</html>
